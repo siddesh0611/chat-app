@@ -33,7 +33,6 @@ app.use('/user', userRoutes);
 app.use('/group', groupRoutes);
 
 
-//database relations
 Group.belongsToMany(User, { through: UserGroup });
 User.belongsToMany(Group, { through: UserGroup });
 Group.hasMany(Message);
